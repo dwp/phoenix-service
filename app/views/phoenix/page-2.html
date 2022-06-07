@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container">
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+      Enter your company PAYE number
+    </label>
+  </h1>
+  <div class="govuk-inset-text">
+  This can be find X.
+</div>
+  <input class="govuk-input govuk-input--width-20"  id="event-name" name="event-name" type="text">
+</div>
+
+
+<a href="page-2a"
+      <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button></a>
+
+    </div>
+  </div>
+  </main>
+  </div>
+{% endblock %}
