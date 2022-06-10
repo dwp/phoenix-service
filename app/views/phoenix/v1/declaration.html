@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-l">
+Declaration </h1>
+
+      <p>
+You confirm that:
+
+
+
+    <ul class="govuk-list govuk-list--bullet">
+    <li>  the information you’ve given is correct and complete as far as you know
+    <li>  you’ll report any changes in your circumstances
+    <li>  you’ll pay back any money you’re overpaid if you’re asked to</li>
+  </ul>
+
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+      You could be prosecuted or have to pay a penalty if you deliberately give the wrong or incomplete information or do not report changes.</p>
+      
+    </strong>
+  </div>
+
+
+
+<a href="page-3"
+      <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button></a>
+  </div>
+  </div>
+</main>
+    </div>
+
+{% endblock %}
