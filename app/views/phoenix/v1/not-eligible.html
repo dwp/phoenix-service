@@ -21,11 +21,16 @@
   <h1 class="govuk-heading-l">
 You are not eligible for subsidised health occupational services </h1>
 
-      <p>
-Your business has to be registered in England or Wales to claim the voucher code.</p>
+  {% if data['register'] === 'no' %}
+      <p>Your business has to be registered in England or Wales to claim the voucher code.</p>
 
+{% elseif data['size'] === 'large' %}
+<p>Your business has to have less than 250 employees.</p>
 
-<p> <a href="#"> Check what other support you can get on how to support and manage disabled employees and employees with health conditions</a></p>
+{% else %}
+{% endif %}
+
+<p> <a href="#"> Find out what other support for your employees you can get</a></p>
 
 
 
