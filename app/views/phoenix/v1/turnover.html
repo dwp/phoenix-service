@@ -25,7 +25,17 @@
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 <span class="govuk-caption-l">Find out if you're eligible</span>
               <h1 class="govuk-fieldset__heading">
-                Is your 2021 to 2022 tax year turnover or balance sheet less than £1.7 milion?
+                Is your 2021 to 2022 tax year turnover less than
+{% if data['size'] === 'small' %}
+              £6.5 million?
+
+{% elseif data['size'] === 'medium' %}
+              £25.9 million?
+
+              {% else %}
+              {% endif %}
+
+
               </h1>
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
