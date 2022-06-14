@@ -9,30 +9,8 @@
   {{ govukHeader() }}
 {% endblock %}
 
-{% block pageScripts %}
-<script src="/public/javascripts/step-by-step-nav.js"></script>
-<script type="text/javascript">
-  var $element = $('#step-by-step-navigation')
-  var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
-  stepByStepNavigation.start($element)
-</script>
-{% endblock %}
 
-{% block beforeContent %}
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Section</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link">Subsection</a>
-      </li>
-    </ol>
-  </div>
-{% endblock %}
+
 
 {% block content %}
   <div class="govuk-grid-row">
@@ -40,38 +18,44 @@
 
       <h1 class="govuk-heading-l">
         Get expert health support at work for a disabled employee or an employee with a health condition
-      </h1>
-<p>Use this service to find subsidised workplace health services. These are often referred to as occupational health services.</p>
-      <p>If an employee's condition is affecting them at work, use this service to find experts who can:</p>
+    </h1>
+<p>Use this service to find subsidised workplace health services if an employee's condition is affecting them at work. Workplace health services are often referred to as occupational health and can provide a range of support to employers. They are usually paid for, but can save you time and money by helping to keep an employee in work.
+<p>
+Eligible businesses will get an 80% discount when buying qualifying occupational health services.</p>
+
+      <p>This service will help you find subsidised occupational health experts who can:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>help you identify what support an employee needs in relation to a specific concern</li>
-        <li>give you advice on supporting an employee back to work if they have become ill</li>
-
+        <li>give tailored advice about an employee’s specific health condition or impairment</li>
+            <li>decide on changes in the workplace</li>
+<li>conduct workplace assessments</li>
+<li>support your employee to manage their health</li>
       </ul>
 
 <h2 class="govuk-heading-m">Who can use this service </h2>
 <p>You can use this service if:</p>
 
 <ul class="govuk-list govuk-list--bullet">
-  <li>you are a micro, small or medium business based in England or Wales</li>
-  <li>your yearly turnover is less than X</li>
-
+  <li>your business is registered in England or Wales
+  <li>you have less than 250 employees</li>
+  <li>you meet one of the following statements, you have:</li>
+<ul class="govuk-list govuk-list--bullet">
+  <li>1-50 employees, a turnover less than £6.5 million or balance sheet total less than £3.26 million</li>
+<li>51-250 employees, a turnover less than £25.9 million or balance sheet total less than £12.9 million</li>
 </ul>
-
-<p>Eligible businesses will get an 80% discount when buying qualifying occupational health services.</p>
+</ul>
 
 <h3 class="govuk-heading-m">Before you start </h3>
 <p>You will need:</p>
 <ul class="govuk-list govuk-list--bullet">
   <li> your business PAYE number</li>
   <li> your number of employees</li>
-  <li> your turnover for the tax year x</li>
+  <li> your turnover or balance sheet for the tax year 2020-2021</li>
   </ul>
 
 
 
-      <a href="page-1" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+      <a href="are-you-eligible" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
         Start now
         <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
           <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
