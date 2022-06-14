@@ -19,9 +19,7 @@ router.post('/phoenix/v1/location', function (req, res) {
 
 router.post('/phoenix/v1/business-size', function (req, res) {
     const size = req.session.data['size'];
-    if (size === "micro") {
-            res.redirect('/phoenix/v1/turnover');
-    } if (size === "small") {
+     if (size === "small") {
                     res.redirect('/phoenix/v1/turnover');
     } if (size === "medium") {
             res.redirect('/phoenix/v1/turnover');
