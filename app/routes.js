@@ -3,28 +3,28 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-//////////                VERSION 1
+//////////            EMPLOYER    VERSION 1
 //Location
 
-router.post('/phoenix/v1/location', function (req, res) {
+router.post('/phoenix/employer/v1/location', function (req, res) {
     const register = req.session.data['register'];
     if (register === "yes") {
-            res.redirect('/phoenix/v1/business-size');
+            res.redirect('/phoenix/employer/v1/business-size');
     } else {
-            res.redirect('/phoenix/v1/not-eligible');
+            res.redirect('/phoenix/employer/v1/not-eligible');
     };
 })
 
 //business-size
 
-router.post('/phoenix/v1/business-size', function (req, res) {
+router.post('/phoenix/employer/v1/business-size', function (req, res) {
     const size = req.session.data['size'];
      if (size === "small") {
-                    res.redirect('/phoenix/v1/turnover');
+                    res.redirect('/phoenix/employer/v1/turnover');
     } if (size === "medium") {
-            res.redirect('/phoenix/v1/turnover');
+            res.redirect('/phoenix/employer/v1/turnover');
     } else {
-            res.redirect('/phoenix/v1/not-eligible');
+            res.redirect('/phoenix/employer/v1/not-eligible');
     };
 })
 
@@ -141,5 +141,63 @@ router.post('/phoenix/provider/v1/input', function (req, res) {
 
     };
 })
+
+
+//////////            EMPLOYER    VERSION 2
+//Location
+
+router.post('/phoenix/employer/v2/location', function (req, res) {
+    const register = req.session.data['register'];
+    if (register === "england") {
+            res.redirect('/phoenix/employer/v2/business-size');
+    } if (register === "wales") {
+                  res.redirect('/phoenix/employer/v2/business-size');
+    } else {
+            res.redirect('/phoenix/employer/v2/not-eligible');
+    };
+})
+
+//business-size
+
+router.post('/phoenix/employer/v2/business-size', function (req, res) {
+    const size = req.session.data['size'];
+     if (size === "small") {
+            res.redirect('/phoenix/employer/v2/turnover');
+    } if (size === "micro") {
+            res.redirect('/phoenix/employer/v2/turnover');
+    } if (size === "medium") {
+            res.redirect('/phoenix/employer/v2/turnover');
+    } else {
+            res.redirect('/phoenix/employer/v2/not-eligible');
+    };
+})
+
+
+//turnover
+
+router.post('/phoenix/employer/v2/turnover', function (req, res) {
+    const turnover = req.session.data['turnover'];
+     if (turnover === "yes") {
+            res.redirect('/phoenix/employer/v2/paye');
+
+    } else {
+            res.redirect('/phoenix/employer/v2/balance-sheet');
+    };
+})
+
+
+
+//balance sheet
+
+router.post('/phoenix/employer/v2/balance-sheet', function (req, res) {
+    const balance = req.session.data['balance'];
+     if (balance === "yes") {
+            res.redirect('/phoenix/employer/v2/paye');
+
+    } else {
+            res.redirect('/phoenix/employer/v2/not-eligible');
+    };
+})
+
 
 module.exports = router

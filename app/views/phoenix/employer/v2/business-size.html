@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form class="form" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<span class="govuk-caption-l">Find out if you're eligible</span>
+              <h1 class="govuk-fieldset__heading">
+                How many employees do you have?
+              </h1>
+            </legend>
+
+            <div class="govuk-inset-text">
+              An employee has extra employment rights and responsibilities. Only count the number of employees in your business, do not include any casual workers.
+<br><br>
+<p>Use the number of employees at the time of submitting this application. If this changes in future you will have an opportunity to report it.</p>
+            </div>
+
+
+            <div class="govuk-radios" data-module="govuk-radios">
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="size-1" name="size" type="radio" value="micro">
+                <label class="govuk-label govuk-radios__label" for="size-1">
+                  1-9 employees
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="size-2" name="size" type="radio" value="small">
+                <label class="govuk-label govuk-radios__label" for="size-2">
+                10-49 employees
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="size-3" name="size" type="radio" value="medium">
+                <label class="govuk-label govuk-radios__label" for="size-3">
+                  50-250 employees
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="size-4" name="size" type="radio" value="large">
+                <label class="govuk-label govuk-radios__label" for="size-4">
+                  More than 250 employees
+                </label>
+              </div>
+
+
+            </div>
+
+          </fieldset>
+        </div>
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}
