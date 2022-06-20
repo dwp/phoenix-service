@@ -51,7 +51,7 @@ router.post('/phoenix/provider/v1/seqohs', function (req, res) {
 router.post('/phoenix/provider/v1/gdpr', function (req, res) {
     const gdpr = req.session.data['gdpr'];
      if (gdpr === "yes") {
-                    res.redirect('/phoenix/provider/v1/upload');
+                    res.redirect('/phoenix/provider/v1/gdpr-upload');
     }if (gdpr === "no") {
                     res.redirect('/phoenix/provider/v1/not-eligible');
 
@@ -64,7 +64,7 @@ router.post('/phoenix/provider/v1/gdpr', function (req, res) {
 router.post('/phoenix/provider/v1/clinical-gov', function (req, res) {
     const clinical = req.session.data['clinical'];
      if (clinical === "yes") {
-                    res.redirect('/phoenix/provider/v1/upload');
+                    res.redirect('/phoenix/provider/v1/clinical-upload');
     }if (clinical === "no") {
                     res.redirect('/phoenix/provider/v1/not-eligible');
 
@@ -73,5 +73,73 @@ router.post('/phoenix/provider/v1/clinical-gov', function (req, res) {
 })
 
 
+//FEEDBACK
+
+router.post('/phoenix/provider/v1/feedback', function (req, res) {
+    const feedback = req.session.data['feedback'];
+     if (feedback === "yes") {
+                    res.redirect('/phoenix/provider/v1/feedback-upload');
+    }if (feedback === "no") {
+                    res.redirect('/phoenix/provider/v1/not-eligible');
+
+
+    };
+})
+
+
+//REFERRAL
+
+router.post('/phoenix/provider/v1/referral', function (req, res) {
+    const referral = req.session.data['referral'];
+     if (referral === "yes") {
+                    res.redirect('/phoenix/provider/v1/referral-upload');
+    }if (referral === "no") {
+                    res.redirect('/phoenix/provider/v1/not-eligible');
+
+
+    };
+})
+
+
+//ASSESSMENT
+
+router.post('/phoenix/provider/v1/assessment', function (req, res) {
+    const assessment = req.session.data['assessment'];
+     if (assessment === "yes") {
+                    res.redirect('/phoenix/provider/v1/assessment-upload');
+    }if (assessment === "no") {
+                    res.redirect('/phoenix/provider/v1/not-eligible');
+
+
+    };
+})
+
+
+//OH REPORT
+
+router.post('/phoenix/provider/v1/oh-report', function (req, res) {
+    const ohreport = req.session.data['oh-report'];
+     if (ohreport === "yes") {
+                    res.redirect('/phoenix/provider/v1/oh-report-upload');
+    }if (ohreport === "no") {
+                    res.redirect('/phoenix/provider/v1/not-eligible');
+
+
+    };
+})
+
+
+//INPUT
+
+router.post('/phoenix/provider/v1/input', function (req, res) {
+    const input = req.session.data['input'];
+     if (input === "yes") {
+                    res.redirect('/phoenix/provider/v1/name');
+    }if (input === "no") {
+                    res.redirect('/phoenix/provider/v1/not-eligible');
+
+
+    };
+})
 
 module.exports = router
