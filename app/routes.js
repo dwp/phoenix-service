@@ -178,7 +178,7 @@ router.post('/phoenix/employer/v2/business-size', function (req, res) {
 router.post('/phoenix/employer/v2/turnover', function (req, res) {
     const turnover = req.session.data['turnover'];
      if (turnover === "yes") {
-            res.redirect('/phoenix/employer/v2/paye');
+            res.redirect('/phoenix/employer/v2/you-may-be-eligible');
 
     } else {
             res.redirect('/phoenix/employer/v2/balance-sheet');
