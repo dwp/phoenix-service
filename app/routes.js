@@ -192,7 +192,7 @@ router.post('/phoenix/employer/v2/turnover', function (req, res) {
 router.post('/phoenix/employer/v2/balance-sheet', function (req, res) {
     const balance = req.session.data['balance'];
      if (balance === "yes") {
-            res.redirect('/phoenix/employer/v2/paye');
+            res.redirect('/phoenix/employer/v2/you-may-be-eligible');
 
     } else {
             res.redirect('/phoenix/employer/v2/not-eligible');
