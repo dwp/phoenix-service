@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+  <form class="form" method="post">
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+              <h1 class="govuk-fieldset__heading">
+                What is your price for the OH assessment?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="delivery" name="delivery" type="radio" value="f2f">
+                <label class="govuk-label govuk-radios__label" for="delivery">
+                50-100
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="delivery-2" name="delivery" type="radio" value="online">
+                <label class="govuk-label govuk-radios__label" for="delivery-2">
+              101-150
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="delivery-3" name="delivery" type="radio" value="both">
+                <label class="govuk-label govuk-radios__label" for="delivery-3">
+              151-200
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="delivery-3" name="delivery" type="radio" value="both">
+                <label class="govuk-label govuk-radios__label" for="delivery-3">
+              201-250
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="delivery-3" name="delivery" type="radio" value="both">
+                <label class="govuk-label govuk-radios__label" for="delivery-3">
+              251-300
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="delivery-3" name="delivery" type="radio" value="both">
+                <label class="govuk-label govuk-radios__label" for="delivery-3">
+              above 300
+                </label>
+              </div>
+
+
+            </div>
+
+          </fieldset>
+        </div>
+
+
+<a href="stop"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}
