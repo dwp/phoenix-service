@@ -18,11 +18,19 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-  <h1 class="govuk-heading-l">Register questionnaire
-</h1>
+  <h1 class="govuk-heading-l">
+You are not eligible to use this service </h1>
 
-      <p>
-Answer series of questions about your business. We need this information to publish it on the providers' register.</p>
+  {% if data['register'] === 'no' %}
+      <p>Your business has to be registered in England or Wales to claim the voucher code.</p>
+
+{% elseif data['size'] === 'large' %}
+<p>Your business has to have less than 250 employees.</p>
+
+{% else %}
+{% endif %}
+
+<p> <a href="#"> Find out what other support for your employees you can get</a></p>
 
 
 
@@ -30,10 +38,6 @@ Answer series of questions about your business. We need this information to publ
 
 
 
-<a href="business-name"
-      <button class="govuk-button" data-module="govuk-button">
-  Continue
-  </button></a>
   </div>
   </div>
 </main>
