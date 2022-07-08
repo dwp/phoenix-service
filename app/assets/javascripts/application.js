@@ -18,7 +18,13 @@ $(document).ready(function () {
 })
 
 
-
+if (typeof MOJFrontend.MultiFileUpload !== "undefined") {
+  new MOJFrontend.MultiFileUpload({
+    container: $(".moj-multi-file-upload"),
+    uploadUrl: "/ajax-upload",
+    deleteUrl: "/ajax-delete",
+  });
+}
 
 new MOJFrontend.FilterToggleButton({
   bigModeMediaQuery: "(min-width: 48.063em)",
