@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+          Experience with small, medium enterprise (SME)
+          </h1>
+        </legend>
+
+        <p>Long term / Short term sickness absence and return to work<br>
+Complex case management<br>
+Fitness for work assessments<br>
+Vocational rehabilitation and redeployment<br>
+Musculoskeletal [MSK] - including DSE / Ergonomic consideration / assessment<br>
+Mental Health / Psychological CM<br>
+Supporting CM referrals for disabled employees<br>
+Supporting CM referrals for employees with Neurodiverse conditions<br>
+Supporting CM referrals for employees who are not absent from work – [to avoid the absence happening in the first instance]<br>
+Ill Health Retirement – [IHR] – case management and case preparation for Independent Doctor review<br>
+Facilitating / leading multi-disciplinary management / HR CM / case conference meetings<br>
+Employment Law and Legislation i.e., EQ Act 2010, H&S etc. to support CM”</p><br>
+    </div>
+
+
+
+
+<a href="list"
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</a>
+
+
+    </div>
+  </div>
+
+{% endblock %}
