@@ -16,31 +16,38 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+<div class="govuk-grid-column-two-thirds">
 
+  <h1 class="govuk-heading-l">Find a provider</h1>
 
+    <div class="moj-search">
+
+      <form action="#" method="post">
+
+        <div class="govuk-form-group">
+
+          <div id="search-hint" class="govuk-hint moj-search__hint ">
+                 You can search by company name
+               </div>
+
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+        </div>
+
+        <button class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+
+      </form>
+    </div>
+
+</div>
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
 
   <div class="govuk-grid-column-one-third ">
-    <h1 class="govuk-heading-l">Filters</h1>
+    <h2 class="govuk-heading-m govuk-!-margin-top-6">Filters</h2>
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-      <div class="govuk-accordion__section ">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-              Company name
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-          <div id="search-hint" class="govuk-hint moj-search__hint ">
-                  You can search by company name
-                </div>
-<input class="govuk-input" id="event-name" name="event-name" type="text">
 
-
-
-        </div>
-      </div>
       <div class="govuk-accordion__section ">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
@@ -55,64 +62,59 @@
             <fieldset class="govuk-fieldset">
 
               <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    All UK
-                  </label>
-                </div>
+
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
                   <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                  London
+                  East Anglia
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
                   <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
-                  South East
+                  London
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
                   <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                    South West
+                    Midlands
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
                   <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                    Wales
+                    North East
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
                   <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                  Midlands
+                North West
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
                   <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                    East Anglia
+                    South East
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                South West
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                  Wales
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
                   <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
                   Yorkshire
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                    North West
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                  North East
                   </label>
                 </div>
 
@@ -124,54 +126,12 @@
             </div>
       </div>
 
-      <!--
-      <div class="govuk-accordion__section ">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-              Delivery model
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-          <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-
-    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-          In person
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-          Online
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
-        Both
-        </label>
-      </div>
-
-    </div>
-
-  </fieldset>
-</div>
-
-              </div>
-      </div>
--->
-
 
       <div class="govuk-accordion__section ">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-              Worked with SMEs
+              Worked with small or medium sized businesses
             </span>
           </h2>
         </div>
@@ -200,15 +160,17 @@
 
               </div>
       </div>
-<!--      <div class="govuk-accordion__section ">
+  <div class="govuk-accordion__section ">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-              Specialisation
+            Specialism
             </span>
           </h2>
         </div>
         <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+
+
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
@@ -217,196 +179,88 @@
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
               <label class="govuk-label govuk-checkboxes__label" for="waste">
-                Academia
+              Chronic pain
               </label>
             </div>
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
               <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                Aerospace
+                  Complex cases
               </label>
             </div>
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
               <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                Agriculture
+                  Disabled employees
+              </label>
+            </div>
+
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              Employees still in work
               </label>
             </div>
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
               <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                Armed Forces
+                Fitness for work assessments
               </label>
             </div>
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                Building
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                Chemicals
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                Commerce
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                Communications
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                Electronics
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                Engineering-Heavy
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                Engineering-Light
-              </label>
-            </div>  <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
                 <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                  Food
+                    Ill health retirement
                 </label>
-              </div>  <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                    Government
-                  </label>
-                </div>  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                      Health
-                    </label>
-                  </div>  <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                        IT
-                      </label>
-                    </div>  <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                          Leisure and Brewing
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                            Local Authority
-                          </label>
-                        </div>
-                        <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                              Media
-                            </label>
-                          </div>
-                          <div class="govuk-checkboxes__item">
-                              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                Medico-legal
-                              </label>
-                            </div>
-                            <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                  Mining
-                                </label>
-                              </div><div class="govuk-checkboxes__item">
-                                  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                    Motor
-                                  </label>
-                                </div><div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                      Oil
-                                    </label>
-                                  </div><div class="govuk-checkboxes__item">
-                                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                        Pharmaceuticals
-                                      </label>
-                                    </div><div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                        Potteries and Glass
-                                        </label>
-                                      </div>
-                                      <div class="govuk-checkboxes__item">
-                                          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                        Radiation Medicine
-                                          </label>
-                                        </div>
-                                        <div class="govuk-checkboxes__item">
-                                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                          Retail
-                                            </label>
-                                          </div>
-                                          <div class="govuk-checkboxes__item">
-                                              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                            Textiles
-                                              </label>
-                                            </div><div class="govuk-checkboxes__item">
-                                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                              Textiles and Paper
-                                                </label>
-                                              </div><div class="govuk-checkboxes__item">
-                                                  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                                  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                                Tabacco
-                                                  </label>
-                                                </div><div class="govuk-checkboxes__item">
-                                                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                                    Transport
-                                                    </label>
-                                                  </div><div class="govuk-checkboxes__item">
-                                                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                                      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                                    Utilities
-                                                      </label>
-                                                    </div><div class="govuk-checkboxes__item">
-                                                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                                      Occupational Medicine
-                                                        </label>
-                                                      </div><div class="govuk-checkboxes__item">
-                                                          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                                          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                                        Mental Health
-                                                          </label>
-                                                        </div><div class="govuk-checkboxes__item">
-                                                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                                        III Health Retirements
-                                                            </label>
-                                                          </div><div class="govuk-checkboxes__item">
-                                                              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                                              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                                            Fitness for Work and Disability Discrimination
-                                                              </label>
-                                                            </div>
+              </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              Long-term sickness absence
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Mental health
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              Musculoskeletal health
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                 Neurodiversity
+                 </label>
+               </div>
+               <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                 <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                   Return to work
+                 </label>
+               </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              Short term sickness absence
+              </label>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              Vocational rehabilitation
+              </label>
+            </div>
+
+
+
 
         </div>
 
@@ -416,60 +270,19 @@
   </div>
 
       </div>
-</div>
-
--->
-<!--
-<div class="govuk-accordion__section ">
-  <div class="govuk-accordion__section-header">
-    <h2 class="govuk-accordion__section-heading">
-      <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-        Price
-      </span>
-    </h2>
   </div>
-  <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-    <div class="govuk-form-group">
-<fieldset class="govuk-fieldset">
 
-<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-    below £100
-  </label>
-</div>
-<div class="govuk-checkboxes__item">
-  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-    £100-£200
-  </label>
-</div>
-<div class="govuk-checkboxes__item">
-  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
-  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
-  £200-£300
-  </label>
-</div>
-
-</div>
-
-</fieldset>
-</div>
-
-        </div>
-</div>
-
--->
 
 
     </div>
 
-
+  <a href="filter-results"
     <button class="govuk-button" data-module="govuk-button">
   Apply filters
-</button>
-<p>
+  </button>
+  </a>
+
+  <p>
       <a class="govuk-link block govuk-!-margin-bottom-6" href="">Clear all filters</a></p>
 
     </form>
@@ -477,130 +290,174 @@
 
 
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Providers list</h1>
-
-    <table class="govuk-table" data-module="moj-sortable-table">
-     <thead class="govuk-table__head">
-       <tr class="govuk-table__row">
-
-           <th scope="col" class="govuk-table__header" aria-sort="ascending">Company name</th>
-            <th scope="col" class="govuk-table__header" aria-sort="ascending">Location</th>
-            <th scope="col" class="govuk-table__header" aria-sort="ascending">Type</th>
-         <th scope="col" class="govuk-table__header" aria-sort="ascending">Worked with SMEs</th>
-  <!--          <th scope="col" class="govuk-table__header" aria-sort="ascending">Main specialisation</th> -->
-
-            <th scope="col" class="govuk-table__header" aria-sort="ascending">Maximum price</th>
 
 
-       </tr>
-     </thead>
-     <tbody class="govuk-table__body">
-       <tr class="govuk-table__row">
+<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-6">5 results</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Company A</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span> East Anglia,
+London,
+Midlands,
+North East,
+North West</span>
+          </li>
+          <li>
+            <span class="govuk-hint">Specialism:</span>
+            <span> Chronic pain, Complex cases, Mental health, Musculoskeletal health, Neurodiversity</span>
+            </li>
+            <li>
+  <span class="govuk-hint">Price range (before discount):</span>
+  <span> £100 to £280 </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type: </span>
+  <span>In person</span>
+  </li>
+  </ul>
+</div>
+</div>
 
 
-         <td class="govuk-table__cell"><a href="provider-details">Company T </a></td>
-         <td class="govuk-table__cell">All UK</td>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-         <td class="govuk-table__cell">In person</td>
-         <td class="govuk-table__cell">Yes</td>
-    <!--      <td class="govuk-table__cell">Retail</td> -->
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Company D</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span>
+London,
+Midlands,
+North East,
+North West </span>
+          </li>
+          <li>
+            <span class="govuk-hint">Specialism:</span>
+            <span> Long term sickness absence, Mental health, Neurodiversity</span>
+            </li>
+            <li>
+  <span class="govuk-hint">Price range (before discount):</span>
+  <span> £120 to £290 </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type: </span>
+  <span>In person and remotely</span>
+  </li>
+  </ul>
+</div>
+</div>
 
-         <td class="govuk-table__cell">£170</td>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Company H</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span> North East,
+North West,
+South East</span>
+          </li>
+          <li>
+            <span class="govuk-hint">Specialism:</span>
+            <span> Chronic pain, Complex cases, Disabled employees, Employees still in work, Fitness for work assessments, Ill health retirement, Long-term sickness absence, Mental health, Musculoskeletal health, Neurodiversity, Return to work, Short term sickness absence, Vocational rehabilitation</span>
+            </li>
+            <li>
+  <span class="govuk-hint">Price range (before discount):</span>
+  <span> £130 to £270 </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type: </span>
+  <span>Remotely</span>
+  </li>
+  </ul>
+</div>
+</div>
 
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-       </tr>
+<p class="govuk-body"><a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Company M</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span>
+North West,
+South West</span>
+          </li>
+          <li>
+            <span class="govuk-hint">Specialism:</span>
+            <span> Fitness for work assessments, Ill health retirement, Mental health, Musculoskeletal health</span>
+            </li>
+            <li>
+  <span class="govuk-hint">Price range (before discount):</span>
+  <span> £110 to £260 </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type: </span>
+  <span>In person and remotely</span>
+  </li>
+  </ul>
+</div>
+</div>
 
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-       <tr class="govuk-table__row">
+<p class="govuk-body"><a href="provider-details" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Company T</a></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <ul class="govuk-list">
+      <li>
+        <span class="govuk-hint">Location:</span>
+          <span> North West </span>
+          </li>
+          <li>
+            <span class="govuk-hint">Specialism:</span>
+            <span> Mental health, Musculoskeletal health, Neurodiversity, Return to work </span>
+            </li>
+            <li>
+  <span class="govuk-hint">Price range (before discount):</span>
+  <span> £115 to £275 </span></li>
+  <li>
+  <span class="govuk-hint">Worked with small or medium sized businesses: </span>
+  <span>Yes</span>
+  </li>
+  <li>
+  <span class="govuk-hint">Type: </span>
+  <span>In person</span>
+  </li>
+  </ul>
+</div>
+</div>
 
-
-         <td class="govuk-table__cell">Company N</td>
-         <td class="govuk-table__cell">London</td>
-
-         <td class="govuk-table__cell">In person</td>
-         <td class="govuk-table__cell">No</td>
-    <!--         <td class="govuk-table__cell">Motor</td> -->
-
-         <td class="govuk-table__cell">£210</td>
-
-
-
-       </tr>
-
-
-       <tr class="govuk-table__row">
-
-
-         <td class="govuk-table__cell">Company P</td>
-         <td class="govuk-table__cell">London</td>
-
-         <td class="govuk-table__cell">In person</td>
-         <td class="govuk-table__cell">Yes</td>
-  <!--           <td class="govuk-table__cell">Building</td> -->
-
-         <td class="govuk-table__cell">£240</td>
-
-
-       </tr>
-
-       <tr class="govuk-table__row">
-
-
-         <td class="govuk-table__cell">Company R</td>
-         <td class="govuk-table__cell">London</td>
-
-         <td class="govuk-table__cell">Online</td>
-         <td class="govuk-table__cell">Yes</td>
-  <!--           <td class="govuk-table__cell">Media</td> -->
-
-         <td class="govuk-table__cell">£200</td>
-
-
-       </tr>
-
-       <tr class="govuk-table__row">
-
-
-         <td class="govuk-table__cell">Company F</td>
-         <td class="govuk-table__cell">London</td>
-
-         <td class="govuk-table__cell">In person</td>
-         <td class="govuk-table__cell">Yes</td>
-    <!--         <td class="govuk-table__cell">Oil</td> -->
-
-         <td class="govuk-table__cell">£195</td>
-
-
-       </tr>
-
-
-       <tr class="govuk-table__row">
-
-
-         <td class="govuk-table__cell">Company G</td>
-         <td class="govuk-table__cell">London</td>
-
-         <td class="govuk-table__cell">In person</td>
-         <td class="govuk-table__cell">No</td>
-      <!--       <td class="govuk-table__cell">Armed Forces</td> -->
-
-         <td class="govuk-table__cell">£130</td>
-
-
-
-       </tr>
-
-
-
-
-
-  </tbody>
-</table>
 
 
 
   </div>
+
+
 </div>
 
 {% endblock %}
