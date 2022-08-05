@@ -259,6 +259,68 @@ router.post('/phoenix/employer/v3/balance-sheet', function (req, res) {
 })
 
 
+/////////            EMPLOYER    VERSION 3
+
+//it didnt require any routing, as we only redesigned the start page and OH page
+
+
+
+//////////            EMPLOYER    VERSION 5
+//Location
+
+router.post('/phoenix/employer/v5/location', function (req, res) {
+    const register = req.session.data['register'];
+    if (register === "england") {
+            res.redirect('/phoenix/employer/v5/business-size');
+    } if (register === "wales") {
+                  res.redirect('/phoenix/employer/v5/business-size');
+    } else {
+            res.redirect('/phoenix/employer/v5/not-eligible-location');
+    };
+})
+
+//business-size
+
+router.post('/phoenix/employer/v5/business-size', function (req, res) {
+    const size = req.session.data['size'];
+     if (size === "small") {
+            res.redirect('/phoenix/employer/v5/turnover');
+    } if (size === "micro") {
+            res.redirect('/phoenix/employer/v5/turnover');
+    } if (size === "medium") {
+            res.redirect('/phoenix/employer/v5/turnover');
+    } else {
+            res.redirect('/phoenix/employer/v5/not-eligible-size');
+    };
+})
+
+
+//turnover
+
+router.post('/phoenix/employer/v5/turnover', function (req, res) {
+    const turnover = req.session.data['turnover'];
+     if (turnover === "yes") {
+            res.redirect('/phoenix/employer/v5/you-may-be-eligible');
+
+    } else {
+            res.redirect('/phoenix/employer/v5/balance-sheet');
+    };
+})
+
+
+
+//balance sheet
+
+router.post('/phoenix/employer/v3/balance-sheet', function (req, res) {
+    const balance = req.session.data['balance'];
+     if (balance === "yes") {
+            res.redirect('/phoenix/employer/v3/you-may-be-eligible');
+
+    } else {
+            res.redirect('/phoenix/employer/v3/not-eligible-money');
+    };
+})
+
 
 
 module.exports = router
