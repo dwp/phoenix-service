@@ -24,24 +24,15 @@
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+
+
+{% if data['size'] === 'micro' %}
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 <span class="govuk-caption-l">Find out if you're eligible</span>
-              <h1 class="govuk-fieldset__heading">
-                Is your 2020 to 2021 tax year balance sheet total less than
-{% if data['size'] === 'small' %}
-              £3.26 million?
+<h1 class="govuk-fieldset__heading">
+            Was your balance sheet total for the 2020 to 2021 financial year £5.1 million or less?
 
-{% elseif data['size'] === 'micro' %}
-            £3.26 million?
-
-{% elseif data['size'] === 'medium' %}
-            £12.9 million?
-
-
-
-              {% else %}
-
-              {% endif %}
 
 
               </h1>
@@ -62,6 +53,58 @@
 
 
             </div>
+    {% elseif data['size'] === 'small' %}
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<span class="govuk-caption-l">Find out if you're eligible</span>
+      <h1 class="govuk-fieldset__heading">
+          Was your balance sheet total for the 2020 to 2021 financial year £5.1 million or less? </h1>
+
+                      </legend>
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="balance" name="balance" type="radio" value="yes">
+                          <label class="govuk-label govuk-radios__label" for="balance">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="balance-2" name="balance" type="radio" value="no">
+                          <label class="govuk-label govuk-radios__label" for="balance-2">
+                            No
+                          </label>
+                        </div>
+
+
+
+
+
+    {% elseif data['size'] === 'medium' %}
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<span class="govuk-caption-l">Find out if you're eligible</span>
+      <h1 class="govuk-fieldset__heading">Was your balance sheet total for the 2020 to 2021 financial year £11.4 million or less?</h1>
+
+                  </legend>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="balance" name="balance" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="balance">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="balance-2" name="balance" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="balance-2">
+                        No
+                      </label>
+                    </div>
+
+
+
+                          {% else %}
+
+                          {% endif %}
+
+
 
           </fieldset>
         </div>

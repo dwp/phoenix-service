@@ -299,11 +299,11 @@ router.post('/phoenix/employer/v5/business-size', function (req, res) {
 
 router.post('/phoenix/employer/v5/turnover', function (req, res) {
     const turnover = req.session.data['turnover'];
-     if (turnover === "yes") {
-            res.redirect('/phoenix/employer/v5/you-may-be-eligible');
+     if (turnover === "no") {
+            res.redirect('/phoenix/employer/v5/balance-sheet');
 
     } else {
-            res.redirect('/phoenix/employer/v5/balance-sheet');
+            res.redirect('/phoenix/employer/v5/you-may-be-eligible');
     };
 })
 
@@ -311,14 +311,14 @@ router.post('/phoenix/employer/v5/turnover', function (req, res) {
 
 //balance sheet
 
-router.post('/phoenix/employer/v3/balance-sheet', function (req, res) {
+router.post('/phoenix/employer/v5/balance-sheet', function (req, res) {
     const balance = req.session.data['balance'];
      if (balance === "yes") {
             res.redirect('/phoenix/employer/v5/you-may-be-eligible');
-
     } else {
-            res.redirect('/phoenix/employer/v5/not-eligible-money');
+            res.redirect('/phoenix/employer/v5/not-eligible-balance-sheet');
     };
+
 })
 
 
