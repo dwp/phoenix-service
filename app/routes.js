@@ -313,10 +313,10 @@ router.post('/phoenix/employer/v5/turnover', function (req, res) {
 
 router.post('/phoenix/employer/v5/balance-sheet', function (req, res) {
     const balance = req.session.data['balance'];
-     if (balance === "yes") {
-            res.redirect('/phoenix/employer/v5/you-may-be-eligible');
-    } else {
+     if (balance === "no") {
             res.redirect('/phoenix/employer/v5/not-eligible-balance-sheet');
+    } else {
+            res.redirect('/phoenix/employer/v5/you-may-be-eligible');
     };
 
 })
