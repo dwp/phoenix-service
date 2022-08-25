@@ -379,4 +379,23 @@ router.post('/phoenix/employer/v6/balance-sheet', function (req, res) {
 })
 
 
+/////////            PROVIDER CODE CHECKER  VERSION 2
+
+
+router.post('/phoenix/provider/code-checker/v2/code-info', function (req, res) {
+    const rightcompany = req.session.data['rightcompany'];
+     if (rightcompany === "yes") {
+            res.redirect('/phoenix/provider/code-checker/v2/claim-code');
+    } else {
+            res.redirect('/phoenix/provider/code-checker/v2/code-doesnt-match');
+    };
+
+})
+
+
+
+
+
+
+
 module.exports = router
