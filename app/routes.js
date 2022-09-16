@@ -393,6 +393,21 @@ router.post('/phoenix/provider/code-checker/v2/code-info', function (req, res) {
 })
 
 
+/////////            PROVIDER CODE CHECKER  VERSION 3
+
+
+router.post('/phoenix/provider/code-checker/v3/code-info', function (req, res) {
+    const rightcompany = req.session.data['rightcompany'];
+     if (rightcompany === "yes") {
+            res.redirect('/phoenix/provider/code-checker/v3/claim-code');
+    } else {
+            res.redirect('/phoenix/provider/code-checker/v3/code-doesnt-match');
+    };
+
+})
+
+
+
 //////////            EMPLOYER    VERSION 7
 //Location
 
