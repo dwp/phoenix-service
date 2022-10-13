@@ -465,6 +465,61 @@ router.post('/phoenix/employer/v7/balance-sheet', function (req, res) {
 })
 
 
+//////////            EMPLOYER    VERSION 7
+//Location
+
+router.post('/phoenix/employer/v8/location', function (req, res) {
+    const register = req.session.data['register'];
+    if (register === "england") {
+            res.redirect('/phoenix/employer/v8/business-size');
+    } if (register === "wales") {
+                  res.redirect('/phoenix/employer/v8/business-size');
+    } else {
+            res.redirect('/phoenix/employer/v8/not-eligible-location');
+    };
+})
+
+//business-size
+
+router.post('/phoenix/employer/v8/business-size', function (req, res) {
+    const size = req.session.data['size'];
+     if (size === "small") {
+            res.redirect('/phoenix/employer/v8/turnover');
+    } if (size === "micro") {
+            res.redirect('/phoenix/employer/v8/turnover');
+    } if (size === "medium") {
+            res.redirect('/phoenix/employer/v8/turnover');
+    } else {
+            res.redirect('/phoenix/employer/v8/not-eligible-size');
+    };
+})
+
+
+//turnover
+
+router.post('/phoenix/employer/v8/turnover', function (req, res) {
+    const turnover = req.session.data['turnover'];
+     if (turnover === "no") {
+            res.redirect('/phoenix/employer/v8/balance-sheet');
+
+    } else {
+            res.redirect('/phoenix/employer/v8/you-may-be-eligible');
+    };
+})
+
+
+
+//balance sheet
+
+router.post('/phoenix/employer/v8/balance-sheet', function (req, res) {
+    const balance = req.session.data['balance'];
+     if (balance === "no") {
+            res.redirect('/phoenix/employer/v8/not-eligible-balance-sheet');
+    } else {
+            res.redirect('/phoenix/employer/v8/you-may-be-eligible');
+    };
+
+})
 
 
 
