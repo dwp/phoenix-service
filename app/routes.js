@@ -580,4 +580,73 @@ router.post('/phoenix/employer/v9/balance-sheet', function (req, res) {
 })
 
 
+//////////            EMPLOYER    VERSION 9
+//Location
+
+router.post('/phoenix/employer/v10/location', function (req, res) {
+    const register = req.session.data['register'];
+    if (register === "england") {
+            res.redirect('/phoenix/employer/v10/business-size');
+    } if (register === "wales") {
+                  res.redirect('/phoenix/employer/v10/business-size');
+    } else {
+            res.redirect('/phoenix/employer/v10/not-eligible-location');
+    };
+})
+
+//business-size
+
+router.post('/phoenix/employer/v10/business-size', function (req, res) {
+    const size = req.session.data['size'];
+     if (size === "small") {
+            res.redirect('/phoenix/employer/v10/turnover');
+    } if (size === "micro") {
+            res.redirect('/phoenix/employer/v10/turnover');
+    } if (size === "medium") {
+            res.redirect('/phoenix/employer/v10/turnover');
+    } else {
+            res.redirect('/phoenix/employer/v10/not-eligible-size');
+    };
+})
+
+
+//turnover
+
+router.post('/phoenix/employer/v10/turnover', function (req, res) {
+    const turnover = req.session.data['turnover'];
+     if (turnover === "no") {
+            res.redirect('/phoenix/employer/v10/balance-sheet');
+
+    } else {
+            res.redirect('/phoenix/employer/v10/you-may-be-eligible');
+    };
+})
+
+
+
+//balance sheet
+
+router.post('/phoenix/employer/v10/balance-sheet', function (req, res) {
+    const balance = req.session.data['balance'];
+     if (balance === "no") {
+            res.redirect('/phoenix/employer/v10/not-eligible-balance-sheet');
+    } else {
+            res.redirect('/phoenix/employer/v10/you-may-be-eligible');
+    };
+
+})
+
+//email address
+
+router.post('/phoenix/employer/v10/email', function (req, res) {
+    const email = req.session.data['email'];
+     if (email === "yes") {
+            res.redirect('/phoenix/employer/v10/email-address');
+    } else {
+            res.redirect('/phoenix/employer/v10/phone-number');
+    };
+
+})
+
+
 module.exports = router
