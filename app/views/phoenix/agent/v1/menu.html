@@ -1,7 +1,7 @@
 {% extends "layout2.html" %}
 
 {% block pageTitle %}
-  Main menu
+  Tasks
 {% endblock %}
 
 
@@ -14,56 +14,64 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">
-      Main menu
+    Tasks
     </h1>
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-        <h2 class="govuk-heading-m">
-             Add new provider
-        </h2>
 
 
-        <ul class="govuk-list">
+
           <ul class="govuk-list">
             <li>
 
                 <a class="govuk-link" href="add-new" aria-describedby="add-new">
-              Add new provider to the list
+              Add a provider to the register
               </a>
 
           </li>
         </ul>
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<h2 class="govuk-heading-m">
-     Edit provider
-</h2>
 
 
-<ul class="govuk-list">
+
   <ul class="govuk-list">
     <li>
 
         <a class="govuk-link" href="search-provider" aria-describedby="search-provider">
-      Edit or delete (deactivate) existing provider
+    Edit provider details 
       </a>
 
   </li>
 </ul>
+
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<h2 class="govuk-heading-m">
-     Validate the code
-</h2>
 
 
-<ul class="govuk-list">
+
+  <ul class="govuk-list">
+    <li>
+
+        <a class="govuk-link" href="search-provider-delete" aria-describedby="search-provider">
+    Delete a provider
+      </a>
+
+  </li>
+</ul>
+
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+
   <ul class="govuk-list">
     <li>
 
         <a class="govuk-link" href="validate-code" aria-describedby="validate-code">
-      Check the code from provider (placeholder text)
+      Check the discount code
       </a>
 
   </li>
