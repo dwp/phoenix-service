@@ -717,5 +717,18 @@ router.post('/phoenix/employer/v11/email', function (req, res) {
 })
 
 
+//////////            AGENT    VERSION 3
+//Address deliver
+
+router.post('/phoenix/agent/v3/add-new-2', function (req, res) {
+    const deliver = req.session.data['deliver'];
+    if (deliver === "yes") {
+            res.redirect('/phoenix/agent/v3/add-new-4');
+
+    } else {
+            res.redirect('/phoenix/agent/v3/want-add-branch');
+    };
+})
+
 
 module.exports = router
