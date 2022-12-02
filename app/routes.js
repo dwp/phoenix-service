@@ -718,15 +718,15 @@ router.post('/phoenix/employer/v11/email', function (req, res) {
 
 
 //////////            AGENT    VERSION 3
-//Address deliver
+//Add branch
 
-router.post('/phoenix/agent/v3/add-new-2', function (req, res) {
-    const deliver = req.session.data['deliver'];
-    if (deliver === "yes") {
-            res.redirect('/phoenix/agent/v3/add-new-4');
+router.post('/phoenix/agent/v4/want-add-branch', function (req, res) {
+    const branch = req.session.data['branch'];
+    if (branch === "yes") {
+            res.redirect('/phoenix/agent/v4/add-new-2');
 
     } else {
-            res.redirect('/phoenix/agent/v3/want-add-branch');
+            res.redirect('/phoenix/agent/v4/added-branch');
     };
 })
 
