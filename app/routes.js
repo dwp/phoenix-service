@@ -730,5 +730,17 @@ router.post('/phoenix/agent/v4/want-add-branch', function (req, res) {
     };
 })
 
+//Publish?
+
+router.post('/phoenix/agent/v4/payment', function (req, res) {
+    const publish = req.session.data['publish'];
+    if (publish === "yes") {
+            res.redirect('/phoenix/agent/v4/added-notification');
+
+    } else {
+            res.redirect('/phoenix/agent/v4/added-not-published');
+    };
+})
+
 
 module.exports = router
