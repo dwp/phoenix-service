@@ -742,5 +742,17 @@ router.post('/phoenix/agent/v4/payment', function (req, res) {
     };
 })
 
+//sop
+
+router.post('/phoenix/agent/v4/sop', function (req, res) {
+    const sop = req.session.data['sop'];
+    if (sop === "yes") {
+            res.redirect('/phoenix/agent/v4/payment');
+
+    } else {
+            res.redirect('/phoenix/agent/v4/added-not-published');
+    };
+})
+
 
 module.exports = router

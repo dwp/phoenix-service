@@ -5,51 +5,28 @@
 {% endblock %}
 
 
-
-
-
 {% block content %}
 
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">
-      This discount code is not valid
+      Discount code not found
     </h1>
 
+<p>This could be because:</p>
 
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Discount code
-        </dt>
-        <dd class="govuk-summary-list__value">
-          WBY 68073
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Company
-        </dt>
-        <dd class="govuk-summary-list__value">
+<ul class="govuk-list govuk-list--bullet">
+<li>you entered the code incorrectly</li>
+<li>the provider made an error on their invoice</li>
+<li>the code does not exist</li>
+</ul>
 
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Email address
-        </dt>
-        <dd class="govuk-summary-list__value">
-          
-        </dd>
-      </div>
-
-
-    </dl>
+<p>Try entering the code again. If it is still not valid, ask the provider to check they put the correct code on their invoice.</p>
 
 
   <a href="validate-code"
-          <button class="govuk-button" data-module="govuk-button">Check another code</button>
+          <button class="govuk-button" data-module="govuk-button">Try again</button>
   </a>
 
 

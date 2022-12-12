@@ -1,5 +1,7 @@
 {% extends "layout2.html" %}
 
+
+
 {% block pageTitle %}
   Main menu
 {% endblock %}
@@ -19,20 +21,20 @@
                 <fieldset class="govuk-fieldset">
 
       <h1 class="govuk-heading-l">
-        Do you want to publish [provider name] on the register?
+        Is [provider name] set up on the SOP payment system?
       </h1>
-<p>This will publish all of [provider name]'s clinics.</p>
+<p>Before publishing a provider's details you must also raise a purchase order number.</p>
         <div class="govuk-radios" data-module="govuk-radios">
 
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="publish" name="publish" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="publish">
+            <input class="govuk-radios__input" id="sop" name="sop" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="sop">
               Yes
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="publish" name="publish" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="publish-2">
+            <input class="govuk-radios__input" id="sop" name="sop" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="sop-2">
             No
             </label>
           </div>
