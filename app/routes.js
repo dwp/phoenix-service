@@ -755,4 +755,19 @@ router.post('/phoenix/agent/v4/sop', function (req, res) {
 })
 
 
+//add new clinic publish
+
+router.post('/phoenix/agent/v4/add-new-clinic-publish', function (req, res) {
+    const publish = req.session.data['publish'];
+    if (publish === "yes") {
+            res.redirect('/phoenix/agent/v4/add-new-clinic-confirmation');
+
+    } else {
+            res.redirect('/phoenix/agent/v4/add-new-clinic-notpublished');
+    };
+})
+
+
+
+
 module.exports = router
