@@ -1,7 +1,13 @@
-const express = require('express')
-const router = express.Router()
+// 
+// For guidance on how to create routes see:
+// https://prototype-kit.service.gov.uk/docs/routes
+// 
 
-// Add your routes here - above the module.exports line
+const govukPrototypeKit = require('govuk-prototype-kit')
+const router = govukPrototypeKit.requests.setupRouter()
+
+// Add your routes here
+
 
 //////////            EMPLOYER    VERSION 1
 //Location
@@ -655,7 +661,7 @@ router.post('/phoenix/employer/v11/location', function (req, res) {
     const register = req.session.data['register'];
     if (register === "england") {
             res.redirect('/phoenix/employer/v11/business-size');
-    } if (register === "wales") {
+    } else if (register === "wales") {
                   res.redirect('/phoenix/employer/v11/business-size');
     } else {
             res.redirect('/phoenix/employer/v11/not-eligible-location');
@@ -668,9 +674,9 @@ router.post('/phoenix/employer/v11/business-size', function (req, res) {
     const size = req.session.data['size'];
      if (size === "small") {
             res.redirect('/phoenix/employer/v11/turnover');
-    } if (size === "micro") {
+    } else if (size === "micro") {
             res.redirect('/phoenix/employer/v11/turnover');
-    } if (size === "medium") {
+    } else  if (size === "medium") {
             res.redirect('/phoenix/employer/v11/turnover');
     } else {
             res.redirect('/phoenix/employer/v11/not-eligible-size');
@@ -770,4 +776,3 @@ router.post('/phoenix/agent/v4/add-new-clinic-publish', function (req, res) {
 
 
 
-module.exports = router
