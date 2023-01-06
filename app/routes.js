@@ -1,7 +1,7 @@
-// 
+//
 // For guidance on how to create routes see:
 // https://prototype-kit.service.gov.uk/docs/routes
-// 
+//
 
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
@@ -775,4 +775,52 @@ router.post('/phoenix/agent/v4/add-new-clinic-publish', function (req, res) {
 
 
 
+//////////            AGENT    VERSION 5
+//Add branch
 
+router.post('/phoenix/agent/v5/want-add-branch', function (req, res) {
+    const branch = req.session.data['branch'];
+    if (branch === "yes") {
+            res.redirect('/phoenix/agent/v5/add-new-2');
+
+    } else {
+            res.redirect('/phoenix/agent/v5/added-branch');
+    };
+})
+
+//Publish?
+
+router.post('/phoenix/agent/v5/payment', function (req, res) {
+    const publish = req.session.data['publish'];
+    if (publish === "yes") {
+            res.redirect('/phoenix/agent/v5/added-notification');
+
+    } else {
+            res.redirect('/phoenix/agent/v5/added-not-published');
+    };
+})
+
+//sop
+
+router.post('/phoenix/agent/v5/sop', function (req, res) {
+    const sop = req.session.data['sop'];
+    if (sop === "yes") {
+            res.redirect('/phoenix/agent/v5/payment');
+
+    } else {
+            res.redirect('/phoenix/agent/v5/added-not-published');
+    };
+})
+
+
+//add new clinic publish
+
+router.post('/phoenix/agent/v5/add-new-clinic-publish', function (req, res) {
+    const publish = req.session.data['publish'];
+    if (publish === "yes") {
+            res.redirect('/phoenix/agent/v5/add-new-clinic-confirmation');
+
+    } else {
+            res.redirect('/phoenix/agent/v5/add-new-clinic-notpublished');
+    };
+})
