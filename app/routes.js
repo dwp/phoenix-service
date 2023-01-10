@@ -824,3 +824,54 @@ router.post('/phoenix/agent/v5/add-new-clinic-publish', function (req, res) {
             res.redirect('/phoenix/agent/v5/add-new-clinic-notpublished');
     };
 })
+
+
+//////////            AGENT    VERSION 6
+//Add branch
+
+router.post('/phoenix/agent/v6/want-add-branch', function (req, res) {
+    const branch = req.session.data['branch'];
+    if (branch === "yes") {
+            res.redirect('/phoenix/agent/v6/add-new-2');
+
+    } else {
+            res.redirect('/phoenix/agent/v6/added-branch');
+    };
+})
+
+//Publish?
+
+router.post('/phoenix/agent/v6/payment', function (req, res) {
+    const publish = req.session.data['publish'];
+    if (publish === "yes") {
+            res.redirect('/phoenix/agent/v6/added-notification');
+
+    } else {
+            res.redirect('/phoenix/agent/v6/added-not-published');
+    };
+})
+
+//sop
+
+router.post('/phoenix/agent/v6/sop', function (req, res) {
+    const sop = req.session.data['sop'];
+    if (sop === "yes") {
+            res.redirect('/phoenix/agent/v6/payment');
+
+    } else {
+            res.redirect('/phoenix/agent/v6/added-not-published');
+    };
+})
+
+
+//add new clinic publish
+
+router.post('/phoenix/agent/v6/add-new-clinic-publish', function (req, res) {
+    const publish = req.session.data['publish'];
+    if (publish === "yes") {
+            res.redirect('/phoenix/agent/v6/add-new-clinic-confirmation');
+
+    } else {
+            res.redirect('/phoenix/agent/v6/add-new-clinic-notpublished');
+    };
+})
