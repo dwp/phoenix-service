@@ -4,21 +4,17 @@
   Main menu
 {% endblock %}
 
-
-
-
+{% block beforeContent %}
+  <a class="govuk-back-link" href="search-provider">Back</a>
+{% endblock %}
 
 {% block content %}
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
-
-
-
     <h1 class="govuk-heading-l">
-      Acorn Occupational Health Ltd
+      Cordell Health Ltd
     </h1>
 
   </div>
@@ -30,17 +26,15 @@
       <nav class="moj-side-navigation govuk-!-margin-top-5" aria-label="Side navigation">
         <ul class="moj-side-navigation__list">
           <li class="moj-side-navigation__item">
-            <a href="single-provider-details-2">Provider details</a>
+            <a href="provider-details-2">Provider details</a>
           </li>
           <li class="moj-side-navigation__item moj-side-navigation__item--active">
-            <a href="single-provider-1v2" aria-current="location">Clinic details</a>
+            <a href="provider-details-5" aria-current="location">Clinic details</a>
           </li>
-
-
 
 
           <li class="moj-side-navigation__item">
-            <a href="single-provider-details-6">Changes history</a>
+            <a href="provider-details-6">Changes history</a>
           </li>
         </ul>
       </nav>
@@ -74,7 +68,7 @@
 
         <dl class="govuk-summary-list govuk-!-margin-top-5">
           <div class="govuk-summary-list__row">
-        <dd class="govuk-summary-list__value">
+          <dd class="govuk-summary-list__value">
             <a class="govuk-link" href="add-new-clinic">
               Add new clinic<span class="govuk-visually-hidden"> address</span>
             </a>
@@ -98,14 +92,14 @@
           </strong>
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="clinic-details-acorn">
+          <a class="govuk-link" href="clinic-details-cordell">
             View<span class="govuk-visually-hidden"> address</span>
           </a>
         </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dd class="govuk-summary-list__value">
-            1-4 Huxley Rd<br> Guildford <br> GU2 7RE
+            72 Guild Street<br> London <br>SE23 6FH
           </dd>
         <dd class="govuk-summary-list__value">
           <strong class="govuk-tag govuk-tag--green">
@@ -121,6 +115,22 @@
       </div>
 
 
+    <div class="govuk-summary-list__row">
+      <dd class="govuk-summary-list__value">
+        16 St John Street<br> Manchester<br> M3 4EA
+      </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--green">
+
+    Published
+      </strong>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="clinic-details-cordell2">
+        View<span class="govuk-visually-hidden"> address</span>
+      </a>
+    </dd>
+  </div>
 
       </dl>
 
