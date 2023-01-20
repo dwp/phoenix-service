@@ -437,7 +437,7 @@ router.post('/phoenix/employer/v7/business-size', function (req, res) {
     } if (size === "micro") {
             res.redirect('/phoenix/employer/v7/turnover');
     } if (size === "medium") {
-            res.redirect('/phoenix/employer/v7/turnover');
+            res.redirect('/phoenix/employer/v7/turnover');    
     } else {
             res.redirect('/phoenix/employer/v7/not-eligible-size');
     };
