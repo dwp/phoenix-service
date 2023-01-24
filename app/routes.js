@@ -437,7 +437,7 @@ router.post('/phoenix/employer/v7/business-size', function (req, res) {
     } if (size === "micro") {
             res.redirect('/phoenix/employer/v7/turnover');
     } if (size === "medium") {
-            res.redirect('/phoenix/employer/v7/turnover');    
+            res.redirect('/phoenix/employer/v7/turnover');
     } else {
             res.redirect('/phoenix/employer/v7/not-eligible-size');
     };
@@ -873,5 +873,18 @@ router.post('/phoenix/agent/v6/add-new-clinic-publish', function (req, res) {
 
     } else {
             res.redirect('/phoenix/agent/v6/add-new-clinic-notpublished');
+    };
+})
+
+
+//remove (delete) clinic
+
+router.post('/phoenix/agent/v6/delete-clinic-cordell', function (req, res) {
+    const removeclinic = req.session.data['removeclinic'];
+    if (removeclinic === "yes") {
+            res.redirect('/phoenix/agent/v6/delete-clinic-cordell-reason');
+
+    } else {
+            res.redirect('/phoenix/agent/v6/clinic-details-cordell');
     };
 })
